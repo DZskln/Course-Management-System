@@ -13,7 +13,7 @@ if(isset($_POST["sent"])){//execute if submit is clicked
 	$password = $_POST["password"];
 	
 	//bring the username and password from database for checking
-	$sql = "select * from admine ";
+	$sql = "select * from admin ";
 	
 	$result = mysqli_query($connect,$sql);
 	
@@ -24,7 +24,7 @@ if(isset($_POST["sent"])){//execute if submit is clicked
 		
 		$res = mysqli_fetch_assoc($result);
 		
-		if($res["username"] == $username && $res["password"] == $password){//verify the username and password
+		if($res["username"] == $username && password_verify($password,$res["password"])){//verify the username and password
 			
 			session_regenerate_id(true);
 			$_SESSION["user"] = "admin";
