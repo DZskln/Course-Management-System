@@ -48,7 +48,7 @@ if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){//check user first
 		}
 	}
 
-}else{header("location:login.php");}//if the user is not admin
+}else{header("location:login.php");exit;}//if the user is not admin
 
 ?>
 <html>

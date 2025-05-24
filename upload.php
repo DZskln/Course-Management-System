@@ -46,7 +46,7 @@ if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){//check the user
 			
 	}else{echo"NO FILE SELECTED";}
 
-}else{echo"this page only for admin";}
+}else{header("location:login.php");exit;}
 
 
 ?>

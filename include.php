@@ -1,7 +1,7 @@
 <?php
 
 $connect = mysqli_connect("localhost","root","","cours");
-if(!$connect){die (mysqli_error($connect));
+if(!$connect){die (mysqli_connect_error());
 }
 
 $pages = ["index.php", "module.php","type.php","file.php"]; //array of the allowed pages
