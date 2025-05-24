@@ -2,6 +2,11 @@
 
 
 session_start();
+// Disable caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 
 if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){//check user first
 	
@@ -43,9 +48,7 @@ if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){//check user first
 		}
 	}
 
-
-	
-}else{echo"this page for only admin";}//if the user is not admin
+}else{header("location:login.php");}//if the user is not admin
 
 ?>
 <html>

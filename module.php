@@ -69,7 +69,7 @@ if(isset($_POST["sent"])){//Receiving the necessary information to the session
 			}else{echo "NO Module exist";}// execute if no module exist in database
 			
 			
-			if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){//if the user is admin add a option to add module
+			if(isset($_SESSION["user"])){//if the user is admin add a option to add module
 	
 				echo '<a href = "add_module.php"> Add Module</a>'; 
 				echo '<br/>';

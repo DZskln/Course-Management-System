@@ -65,7 +65,7 @@ if(isset($_SESSION["type"],$_SESSION["module"],$_SESSION["id_module"])){// check
 				
 				
 				
-				$name= substr($res["path"],5);//remove the first 5 letters in path (data/);
+				$name= $res["original_name"];//remove the first 5 letters in path (data/);
 				$path = $res["path"];
 				
 				echo "<a href='".$path."' target='_blank' >".$name. "  </a>";

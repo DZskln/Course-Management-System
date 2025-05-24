@@ -1,10 +1,16 @@
 <?php
 
-
+session_start();
 require_once("include.php");
 
+if(isset($_SESSION["last_page"])){
+	$des = $_SESSION["last_page"];
+}else{
+	$des = "index.php";
+}
+echo"<a href='$des' >Retour</a>";
+echo"<br/>";
 
-session_start();
 
 
 if(isset($_POST["sent"])){//execute if submit is clicked
@@ -53,8 +59,6 @@ if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){
 	
 	?>
 	
-	<a href="index.php" >Retour</a>
-	<br/>
 	
 	<form method ="post" >
 	
