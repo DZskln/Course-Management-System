@@ -1,82 +1,110 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-session_start();
-require_once("include.php");
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="./assets/Favicon.png">
+	<link rel="stylesheet" href="./style/loginStyling.css">
+	<title>Log In</title>
+</head>
 
-if(isset($_SESSION["last_page"])){
-	$des = $_SESSION["last_page"];
-}else{
-	$des = "index.php";
-}
-echo"<a href='$des' >Retour</a>";
-echo"<br/>";
-
+<body>
 
 
-if(isset($_POST["sent"])){//execute if submit is clicked
-	
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	
-	//bring the username and password from database for checking
-	$sql = "select * from admin ";
-	
-	$result = mysqli_query($connect,$sql);
-	
-	if(!$result){//If an error occurs when bringing
-		die( "ERROR" . mysqli_error($connect)); 
-			
-	}else{//if bringing successfully
-		
-		$res = mysqli_fetch_assoc($result);
-		
-		if($res["username"] == $username && password_verify($password,$res["password"])){//verify the username and password
-			
-			session_regenerate_id(true);
-			$_SESSION["user"] = "admin";
-			
-			if(isset($_SESSION["last_page"])){
 
-				header("location:".$_SESSION["last_page"]);
 
-			}else{header("location:index.php");}
-			
-		}else{
-			
-			echo "username or password is wrong , try again ";
-			echo "<br/>";
-		}	
+
+
+
+	<?php
+
+
+	require_once("include.php");
+
+
+	session_start();
+
+
+	if (isset($_POST["sent"])) { //execute if submit is clicked
+
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+
+		//bring the username and password from database for checking
+		$sql = "select * from admin ";
+
+		$result = mysqli_query($connect, $sql);
+
+		if (!$result) { //If an error occurs when bringing
+			die("ERROR" . mysqli_error($connect));
+		} else { //if bringing successfully
+
+			$res = mysqli_fetch_assoc($result);
+
+			if ($res["username"] == $username && password_verify($password, $res["password"])) { //verify the username and password
+
+				session_regenerate_id(true);
+				$_SESSION["user"] = "admin";
+
+				if (isset($_SESSION["last_page"])) {
+
+					header("location:" . $_SESSION["last_page"]);
+				} else {
+					header("location:index.php");
+				}
+			} else {
+				// this code is editted by Rafie
+				// echo "username or password is wrong , try again ";
+				$wrongInfoMsg = "username or password is wrong, Try again ";
+			}
+		}
 	}
-	
-}
 
 
-if(isset($_SESSION["user"]) && $_SESSION["user"] == "admin"){
-	
-	echo "You're already logged in";
-	
-}else{
-	
+	if (isset($_SESSION["user"]) && $_SESSION["user"] == "admin") {
+
+		echo "You're already logged in";
+	} else {
+
 	?>
-	
-	
-	<form method ="post" >
-	
-		<label for ="username">username</label>
-		<input type="text" id="username" placeholder="username" name="username" />
-		<br/>
-		
-		<label for ="password" >password</label>
-		<input type = "password" id="password" name="password" placeholder="password" />
-		
-		<br/>
-		
-		<input type="submit" name="sent" />
-	
-	</form>
-	
-<?php
 
-		
-}
-?>
+
+		<div class="heroContainer">
+			<div class="heroSubContainer">
+				<h1>Admin Log in</h1>
+				<form method="post">
+					<div class="inputField">
+						<label for="username">Username</label>
+						<input class="adminInfo usernameField" type="text" id="username" placeholder="Username" name="username" />
+					</div>
+
+					<div class="inputField">
+						<label for="password">Password</label>
+						<input class="adminInfo passwordField" type="password" id="password" name="password" placeholder="Password" />
+					</div>
+
+					<?php
+						if(isset($wrongInfoMsg)){
+							echo "<p class='wrongInfoMsg' >$wrongInfoMsg</p>";
+						}
+						
+					?>
+
+					<div class="ctaContainers">
+						<input class="cta loginButton" value="Log in" type="submit" name="sent" />
+						<a class="cta" href="index.php">Retour</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	<?php
+
+
+	}
+	?>
+
+</body>
+
+</html>

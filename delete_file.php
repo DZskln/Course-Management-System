@@ -9,7 +9,7 @@ if(isset($_SESSION["user"]) && $_SESSION["user"] === "admin"){
 
 
 	echo ' <a href="file.php" >Retour</a>';
-	echo ' <br/>';
+	
 
 	if(isset($_GET["id_file"])){
 		
