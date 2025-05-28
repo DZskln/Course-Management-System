@@ -1,0 +1,189 @@
+@import url(./style.css);
+
+.heroSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 80vw;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    overflow-y: scroll;
+}
+
+
+/* --- Scrollbar Styling starts --- */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    /* background-color: red; */
+    background: rgba(255, 255, 255, 0.688);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    margin-block: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffca28;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+
+/* --- Scrollbar Styling ends --- */
+
+.addFileButton{
+    height: 82px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #00000016;
+
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-style: none;
+    text-decoration-color: none;
+    color: #000000;
+    background-color: var(--primaryColor--);
+    font-weight: 600;
+}
+
+.addFileButton img{
+    height: 70%;
+}
+
+
+
+
+
+.unitCoursContainer {
+    height: 82px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.538);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.fileNameIconContiner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-style: none;
+    color: #000000;
+    font-weight: 600;
+    width: 100%;
+}
+
+.fileNameIconContiner p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fileNameIconContiner img {
+    width: 46px;
+}
+
+
+.downloadDeleteIconsContainer {
+    display: flex;
+
+}
+
+.downloadIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #ffca28;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ff000027;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.downloadIconContainer img {
+    width: 28px;
+}
+
+.deleteIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ff000027;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.deleteIconContainer img {
+    width: 28px;
+}
+
+
+
+/* --- Hover styling --- */
+
+.addFileButton:hover{
+    transform: scale(1.03);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffbf00;
+}
+
+.unitCoursContainer:hover {
+    transform: scale(1.03);
+}
+
+.deleteIconContainer:hover {
+    box-shadow: 0px 0px 10px #ff000093;
+}
+
+.downloadIconContainer:hover {
+    box-shadow: 0px 0px 10px #ffc928;
+}
+
+
+
+/* --- Active styling --- */
+
+.addFileButton:active{
+    transform: scale(1.01);
+}
+
+.unitCoursContainer:active {
+    transform: scale(1.01);
+}
+

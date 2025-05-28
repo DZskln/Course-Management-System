@@ -1,0 +1,88 @@
+@import url(./style.css);
+
+.heroSubContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    
+} 
+
+.heroSubContainer h1{
+    font-size: 1.5rem;
+}
+
+.heroSubContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.inputField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+}
+
+.inputField label{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+
+.moduleInfo{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .9rem;
+    font-weight: 500;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgb(111, 111, 111);
+    width: 20vw;
+}
+
+.tpValidity{
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 100%;
+    appearance: none;
+    font-size: .9rem;
+    background-image: url(../assets/arrow_drop_down_Triangle.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right 15px center;
+    box-shadow: 0px 2px 0px #00000000;
+}
+
+.ctaContainers{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ctaContainers input, .ctaContainers a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+.addModuleButton{
+    background-color: greenyellow;
+}

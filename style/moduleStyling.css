@@ -1,0 +1,120 @@
+@import url(./style.css);
+
+
+.heroSubContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 80vw;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+.unitModuleContainer {
+    max-height: 82px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(80vw/3.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.538);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.moduleNameIconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-style: none;
+    color: #000000;
+    font-weight: 600;
+    max-width: 19vw;
+    width: 100%;
+}
+
+.moduleNameIconContainer p{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.moduleNameIconContainer img {
+    width: 42px;
+}
+
+
+
+.deleteIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ff000027;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.deleteIconContainer img {
+    width: 28px;
+}
+
+.addModuleButton {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+}
+
+.addModuleButton img {
+    width: 48px;
+}
+
+
+
+
+/* --- Hover Design --- */
+
+.unitModuleContainer:hover {
+    transform: scale(1.03);
+}
+
+.moduleNameIconContainer:hover {
+    color: #ffa000;
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+.deleteIconContainer:hover {
+    box-shadow: 0px 0px 10px #ff000093;
+}
+
+
+/* --- Active Design --- */
+
+.unitModuleContainer:active {
+    transform: scale(1.01);
+}

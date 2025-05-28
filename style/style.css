@@ -1,0 +1,129 @@
+/* --- this file is for the common styling for blocks --- */
+
+
+
+/* --- initialising the default Settings --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+    --primaryColor--: aqua;
+    --secondaryColor--: red;
+    --backgroundColor--: white;
+    transition: all ease-out .15s;
+    text-decoration: none;
+    font-style: none;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* --- Static Desing --- */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(../assets/27985435_7368190.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navContainer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* background-color: var(--backgroundColor--); */
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.NavBar h1 {
+    font-size: 1.4rem;
+}
+
+.cta {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-style: none;
+    text-decoration-color: none;
+    color: #000000;
+    background-color: var(--primaryColor--);
+    box-shadow: 2px 2px 0px #000000;
+    font-weight: 600;
+}
+
+
+.logInButton {
+    font-size: 0.8rem;
+}
+
+.logOutButton {
+    color: white;
+    font-size: 0.8rem;
+    background-color: red;
+}
+
+
+
+
+.heroContainer {
+    width: 100vw;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* --- Hover Design --- */
+
+.cta:hover {
+    transform: translateX(-2px) translateY(-2px);
+    box-shadow: 4px 4px 0px #000000;
+}
+
+
+
+
+
+
+/* --- Activ Design --- */
+
+.cta:active {
+    background-color: rgb(58, 255, 255);
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 0px 0px 0px #000000;
+}
