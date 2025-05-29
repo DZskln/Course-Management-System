@@ -12,7 +12,7 @@
     background: rgba(255, 255, 255, 0.23);
     box-shadow: 4px 4px 15px #00000014;
     backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+   
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
