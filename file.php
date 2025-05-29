@@ -22,6 +22,7 @@
 			$_SESSION["last_page"] = "file.php";
 
 			if (isset($_GET["type"])) {
+				// if we come from get method
 				//check if the type exist;
 				if (in_array($_GET["type"], $types)) {
 					$_SESSION["type"] = $_GET["type"];
