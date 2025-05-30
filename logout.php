@@ -40,12 +40,6 @@
 						<h1>Do you want to log out?</h1>
 						<form action='logout.php' method='post'>
 
-
-
-							<!-- did you worked with the value or the name?? -->
-							<!-- <input class="cta" type='submit' value='Yes' name='yes' />
-							<input class="cta" type='submit' value='No' name='no' /> -->
-
 							<input class="cta logOutConfirmation" type='submit' value='Log Out' name='yes' />
 							<input class="cta" type='submit' value='Stay In' name='no' />
 						</form>

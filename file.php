@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="./assets/Favicon.png">
 	<link rel="stylesheet" href="./style/fileStyling.css">
-	<!-- add the module name -->
 	<title>Documents</title>
 </head>
 
@@ -23,6 +22,7 @@
 			$_SESSION["last_page"] = "file.php";
 
 			if (isset($_GET["type"])) {
+				// if we come from get method
 				//check if the type exist;
 				if (in_array($_GET["type"], $types)) {
 					$_SESSION["type"] = $_GET["type"];
@@ -58,19 +58,6 @@
 
 
 			<?php
-
-			// this code is commented by Rafie, and it is moved to above, so 
-			// we can show the module name and file type in the nav bar
-
-			// if (isset($_GET["type"])) {
-			// 	//check if the type exist;
-			// 	if (in_array($_GET["type"], $types)) { 
-			// 		$_SESSION["type"] = $_GET["type"];
-			// 	} else {
-			// 		// if the type not exist stop the script;
-			// 		die("type n'exist pas");
-			// 	} 
-			// }
 
 
 			// check first if the information exist in the session to execute the script
