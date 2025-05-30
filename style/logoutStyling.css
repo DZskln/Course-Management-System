@@ -1,0 +1,33 @@
+@import url(./style.css);
+
+.heroSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 4px 4px 15px #00000014;
+    backdrop-filter: blur(7px);
+   
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.heroSubContainer h1{
+    font-size: 1.5em;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logOutConfirmation{
+    background-color: red;
+    color: white;
+}
